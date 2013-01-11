@@ -1,0 +1,17 @@
+<div class="row">
+  <div id="stage" class="span12">
+    <div class="content-stage-left content-stage">
+      <h2>Your saved sets</h2>
+        <% if(sets.length == 0) {%>
+          <p>You have no saved sets.</p>
+        <% } else { %>
+          <ul>
+            <% for(var i = 0; i < sets.length; i++) { %>
+              <% var set = sets[i] %>
+              <li><a href="/sets/<%= set.setId %>"><%= set.title %></a></li>
+            <% } %>
+          </ul>
+        <% } %>
+    </div>
+  </div>
+</div>
