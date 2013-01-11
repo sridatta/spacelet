@@ -13,7 +13,7 @@ exports.initializeSetForUser = function(setId, userId, title, terms, cb) {
     var card = terms[i];
     card.eFactor = 2.5;
     card.numRepetitions = 0;
-    card.replayDate = Date.now();
+    card.replayDate = null;
     card.lastPlayed = null;
     document.cards.push(card);
   }

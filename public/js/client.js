@@ -38,7 +38,7 @@
     var cards = window.cards;
     for(var i = 0; i < cards.length; i++){
       var card = cards[i];
-      if(card.replayDate <= now && card.lastPlayed < card.replayDate) {
+      if(!card.replayDate || (card.replayDate <= now && card.lastPlayed < card.replayDate)) {
         toReview.push(card);
       }
     }
