@@ -1,0 +1,138 @@
+#set-search-results {
+  max-height: 400px;
+  overflow: scroll;
+}
+
+#set-search-results ul {
+  margin-left: 0;
+}
+
+#set-search-results ul li{
+  list-style: none;
+  padding: 15px 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid gray;
+}
+
+#review-stage {
+  display:none;
+}
+
+.post-start {
+  display:none;
+}
+
+#start-controls {
+  display: none;
+}
+
+.card {
+  width: 50%;
+  margin: 0 auto;
+  padding: 60px;
+  min-height: 150px;
+  background-color: white;
+  background-image: url('/img/lined_paper.png');
+  border: solid 1px #CCC;
+}
+
+.card-answer {
+  visibility: hidden;
+  font-size: 20px;
+}
+
+#banner {
+  background-color: #413659;
+  color: white;
+}
+
+#banner a {
+  color: white;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+#banner h1 {
+  font-family: 'Sansita One', cursive;
+  padding: 0 15px;
+}
+
+body {
+  background: url('/img/grey.png');
+}
+
+body p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6, strong {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#stage {
+  background-color: #F2EFDF;
+  padding-bottom: 25px;
+}
+
+.set-title {
+  text-align: center;
+}
+
+.content-stage {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#controls-container {
+  text-align: center;
+}
+
+#homepage-hero {
+  background-color: #F2EFDF;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.toggle-content {
+  padding: 15px;
+}
+
+.toggle-wrapper {
+  background-color: white;
+}
+
+#url-pane {
+  display: none;
+}
+
+div.clear {
+  clear:both;
+}
+
+body a{
+  color: #7F94B0;
+}
+
+.login-form {
+  width: 50%;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; 
+  -webkit-border-radius: 10px 10px 10px 10px;
+     -moz-border-radius: 10px 10px 10px 10px;
+          border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  margin: 0 auto;
+}
+
+.nag {
+  text-align: center;
+}
+
+.login-alert {
+  display: none;
+}

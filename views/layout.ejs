@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spacelet!</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700|Sansita+One' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="banner" class="span12">
+          <div class="span9">
+            <a href="/" class="logo"><h1 class="tada">Spacelet</h1></a>
+          </div>
+          <% if(authenticated) { %>
+            <a href="/logout">Log out</a>
+          <% } else {%>
+            <a href="/login">Sign up/Sign in</a>
+          <% } %>
+        </div>
+      </div>
+      <%- body %>
+    </div>
+  </body>
+  <script type="text/x-handlebars-template" id="stats-screen-template">
+    <h2>You're done!</h2>
+    <p>You repeated <b>{{numRepeated}}</b> cards</p>
+    <p>You improved your score on <b>{{numImproved}}</b> cards</p>
+    <a href="/">Return to homepage</a>
+  </script>
+  <script id="start-screen-template" type="text/x-handlebars-template">
+    <p>You have {{numToReview}} out of {{numTotal}} cards to review today.</p>
+  </script>
+  <script id="card-template" type="text/x-handlebars-template">
+    <div class="card">
+      <h2>{{card.term}}</h2>
+      {{#if card.image}}
+        <img src="{{card.image.url}}" alt="{{card.term}}">
+      {{/if}}
+      <p class="card-answer">{{card.definition}}</p>
+    </div>
+  </script>
+  <script id="search-result-template" type="text/x-handlebars-template">
+    <li>
+      <a href="/sets/{{result.id}}/practice"<b>{{result.title}}</b></a>
+      <br>
+      by {{result.created_by}}
+    </li>
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/js-signals/0.8.1/js-signals.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/crossroads/0.11.0/crossroads.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"> </script>
+  <script type="text/javascript" src="/js/client.js"></script>
+</html>

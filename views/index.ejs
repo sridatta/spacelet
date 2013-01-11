@@ -1,0 +1,61 @@
+
+<div id="homepage-hero" class="hero-unit">
+  <div class="row">
+    <div class="span6">
+      <h2>
+        Learn more quickly and effectively
+      </h2>
+      <p>
+        Spacelet uses spaced repetition to quiz you on facts before you forget them.
+      </p>
+      <p>
+        Study vocabulary, foreign languages, standardized tests and more
+        with millions of flashcard sets powered by <a href="http://quizlet.com">Quizlet</a>.
+      </p>
+    </div>
+    <div class="span4">
+      <img src="/img/screenshot.png" alt="" />
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="toggle-wrapper span12">
+    <div class="tabbable tabs-left">
+      <ul class="nav nav-tabs">
+        <li id="search-tab" class="active">
+          <a><h3>Search for sets</h3></a>
+        </li>
+        <li id="url-tab"><a><h3>Enter a Quizlet URL</h3></a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="search-pane" class="toggle-content">
+          <div class="set-search ">
+            <form id="set-search-form">
+              <input type="text" class="search-query" value="<%= query %>">
+              <button type="submit" class="btn">Search</button>
+            </form>
+            <div id="set-search-results" class="search-results well">
+              <ul class=""></ul>
+              <div id="set-search-placeholder"class="row">
+                <div class="span1">
+                  <img src="/img/ajax-loader.gif" alt="" />
+                </div>
+                <b>Searching...</b>
+              </div>
+            </div> <!-- results -->
+          </div>
+        </div> <!-- explore pane -->
+
+        <div id="url-pane" class="toggle-content">
+          <form id="url-form" class="set-search-form form-inline">
+            <input id="url-input" type="text" class="input-large" value="http://quizlet.com/1948942/fossils-brachiopoda-flash-cards/">
+            <button type="submit" class="btn">Start</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+  window.cachedResults = <%- JSON.stringify(sets) %>;
+</script>

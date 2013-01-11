@@ -1,0 +1,43 @@
+<div class="row">
+  <div id="stage" class="span12">
+    <% if(!authenticated) { %>
+      <div class="alert nag">
+        Hey there! <a href="/login">Sign up</a> to save your learning progress.
+      </div>
+    <% } %>
+
+    <h1 class="set-title span12"><%= setTitle %></h1>
+    <div id="message-stage" class="span12 content-stage">
+      <p>There are no cards to review today.<p>
+      <a href="/">Return to homepage</a>
+    </div>
+
+    <div id="review-stage" class="span12">
+      <div class="card-container content-stage">
+
+      </div>
+    </div>
+    <div id="controls-container" class="span12">
+      <div id="start-controls" class="control-set">
+        <button class="btn btn-primary">Start review</button>
+      </div>
+      <div id="reveal-controls" class="control-set post-start">
+        <button class="btn btn-primary" id="reveal-button">Reveal</button>
+      </div>
+      <div id="rating-controls" class="control-set post-start">
+        <p>How did you do on this card?</p>
+        <button class="btn btn-primary rating-button" data-score="0">Failed</button>
+        <button class="btn btn-primary rating-button" data-score="1">Hard</button>
+        <button class="btn btn-primary rating-button" data-score="3">Medium</button>
+        <button class="btn btn-primary rating-button" data-score="5">Easy</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    (function(){
+     window.cards = <%- JSON.stringify(setCards) %>;
+    })();
+</script>
+
