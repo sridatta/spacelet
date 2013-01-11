@@ -3,7 +3,6 @@ var db = mongoskin.db('localhost:27017/spacelet');
 var sets = db.collection('sets');
 
 exports.getSetForUser = function (setId, userId, cb) {
-  console.log(setId, userId);
   sets.findOne({userId: userId, setId: setId}, cb);
 };
 
@@ -23,6 +22,18 @@ exports.initializeSetForUser = function(setId, userId, title, terms, cb) {
       cb(err, inserted[0]);
     } else {
       cb(err, null);
+    }
+  });
+};
+
+exports.getAllSetsForUser = function(userId, cb){
+  sets.find({userId: userId}, function(err, results){
+    if(err){
+      cb(err);
+    } else {
+      results.toArray(function(err, results){
+        cb(err, results);
+      });
     }
   });
 };

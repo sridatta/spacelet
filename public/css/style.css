@@ -85,6 +85,11 @@ body h1, body h2, body h3, body h4, body h5, body h6, strong {
   text-align: center;
 }
 
+.content-stage-left {
+  text-align: left;
+  padding-left: 45px;
+}
+
 #controls-container {
   text-align: center;
 }
@@ -135,4 +140,10 @@ body a{
 
 .login-alert {
   display: none;
+}
+
+.banner-nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
 }

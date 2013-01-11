@@ -46,6 +46,8 @@ app.get('/logout', routes.logout);
 
 app.post('/signup', routes.signup);
 
+app.get('/saved', routes.savedSets);
+
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });

@@ -13,11 +13,14 @@
           <div class="span9">
             <a href="/" class="logo"><h1 class="tada">Spacelet</h1></a>
           </div>
-          <% if(authenticated) { %>
-            <a href="/logout">Log out</a>
-          <% } else {%>
-            <a href="/login">Sign up/Sign in</a>
-          <% } %>
+          <ul class="banner-nav">
+            <% if(authenticated) { %>
+              <li><a href="/saved">Your sets</a></li>
+              <li><a href="/logout">Log out</a></li>
+            <% } else {%>
+              <li><a href="/login">Sign up/Sign in</a></li>
+            <% } %>
+          </ul>
         </div>
       </div>
       <%- body %>

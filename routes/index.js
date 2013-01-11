@@ -57,7 +57,6 @@ exports.updateSet = function(req, res) {
   if(req.body && req.body.cards && req.body.setId){
     sets.updateCards(req.body.setId, req.session.userId, req.body.cards, function(err, result){
       if(err) {
-        console.log(err);
         res.send(400);
         return;
       }
@@ -98,6 +97,18 @@ exports.signup = function (req, res) {
      } else {
       res.redirect('/login?userExists=true');
      }
+  });
+};
+
+exports.savedSets = function(req, res) {
+  sets.getAllSetsForUser(req.session.userId, function(err, sets){
+    if(err){
+      res.redirect('back');
+      return;
+    }
+
+    res.render('saved', {sets: sets, authenticated: req.session.authenticated});
+
   });
 };
 
